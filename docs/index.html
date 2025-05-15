@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>hi there</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #fefefe;
+      color: #222;
+    }
+    .container {
+      text-align: center;
+      cursor: pointer;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      transition: transform 0.2s ease;
+    }
+    .container:hover {
+      transform: scale(1.05);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" onclick="launchConfetti()">
+    <h1>hi there 👋😊</h1>
+  </div>
+
+  <script>
+    function launchConfetti() {
+      confetti({
+        particleCount: 120,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+</body>
+</html>
